@@ -5,11 +5,6 @@ function randomNumber(min,max)
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-//Number of Delivery runs
-
-function randomNumberD() {
-  return
-}
 
 
 // Store Objects
@@ -23,7 +18,13 @@ var printIt = document.getElementById('test');
 printIt.textContent = "hi";
 
 var printBPN8 = document.getElementById('BPN8');
-printBPN8.textContent = randomNumber(1,4);
+var BPN8am = randomNumber(0,4)
+printBPN8.textContent = BPN8am;
+
+
+var printBDN8 = document.getElementById('BDN8');
+var BDN8am = Math.ceil(BPN8am/2);
+printBDN8.textContent = BDN8am;
 
 // var printBDN8 = document.getElementById('BDN8');
 // printBDN8.textContent = randomNumber(1,4) <=
