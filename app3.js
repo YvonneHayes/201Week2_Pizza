@@ -26,6 +26,33 @@ var Downtown = {
   minMaxDeliveries: [[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[1,4],[1,4],[1,4],[4,6],[4,6],[4,6],[7,15],[7,15],[7,15],[2,8],[2,8],[2,8]]
 }
 
+//North East Object
+
+var NorthEast = {
+  AnchorName: 'NorthEastAnchor',
+  timeSlots: ['8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm','9pm','10pm','11pm','12am','1am'],
+  minMaxPizza: [[0,4],[0,4],[0,4],[0,7],[0,7],[0,7],[5,15],[5,15],[5,15],[25,39],[25,39],[25,39],[22,36],[22,36],[22,36],[5,21],[5,21],[5,21]],
+  minMaxDeliveries: [[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[13,18],[13,18],[13,18],[5,22],[5,22],[5,22],[16,31],[16,31],[16,31]]
+}
+
+//Clackamas Object
+
+var Clackamas = {
+  AnchorName: 'ClackamasAnchor',
+  timeSlots: ['8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm','9pm','10pm','11pm','12am','1am'],
+  minMaxPizza: [[2,7],[2,7],[2,7],[3,8],[3,8],[3,8],[1,5],[1,5],[1,5],[5,13],[5,13],[5,13],[22,41],[22,41],[22,41],[15,20],[15,20],[15,20]],
+  minMaxDeliveries: [[3,5],[3,5],[3,5],[3,9],[3,9],[3,9],[1,4],[1,4],[1,4],[2,4],[2,4],[2,4],[15,42],[15,42],[15,42],[6,21],[6,21],[6,21]]
+}
+
+//PDX Airport Object
+
+var PDXAirport = {
+  AnchorName: 'PDXAirportAnchor',
+  timeSlots: ['8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm','9pm','10pm','11pm','12am','1am'],
+  minMaxPizza: [[0,4],[0,4],[0,4],[0,7],[0,7],[0,7],[2,15],[2,15],[2,15],[6,9],[6,9],[6,9],[4,8],[4,8],[4,8],[2,4],[2,4],[2,4]],
+  minMaxDeliveries: [[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[1,4],[1,4],[1,4],[5,18],[5,18],[5,18],[2,5],[2,5],[2,5],[3,11],[3,11],[3,11]]
+}
+
 
 //Random Number Generator
 
@@ -100,6 +127,11 @@ function generate_table(obj) {
   tbl.setAttribute("border", "2");
 }
 
+//Calling Function to generate all the tables
+
 generate_table(Beaverton);
 generate_table(Hillsboro);
 generate_table(Downtown);
+generate_table(NorthEast);
+generate_table(Clackamas);
+generate_table(PDXAirport);
