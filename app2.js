@@ -142,6 +142,8 @@ generate_table(Clackamas);
 generate_table(PDXAirport);
 
 
-//Total Number of Pizzas sold
-
+//count it and print it
 console.log(PizzaCounterWeekly);
+
+var printItPlease = document.getElementById("putItHere");
+printItPlease.textContent = "Total Number of Pizzas sold this week is " + PizzaCounterWeekly + "!";
