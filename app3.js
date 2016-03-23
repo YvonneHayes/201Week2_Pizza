@@ -5,6 +5,7 @@ function randomNumber(min,max)
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
+
 //Beaverton Object
 
 var Beaverton = {
@@ -20,9 +21,8 @@ var Beaverton = {
 function printDatainTable (obj) {
   for (i=0; i <obj.pizzaSales.length; i++){
     var tempID = document.getElementById(obj.pizzaSales[i]);
-    var tempRandom = randomNumber(obj.minMaxPizza[i][0], obj.minMaxPizza[i][1]);
+    tempRandom = randomNumber(obj.minMaxPizza[i][0], obj.minMaxPizza[i][1]);
     tempID.textContent = tempRandom;
-
     var tempID2 = document.getElementById(obj.numberOfDeliveries[i]);
       if (tempRandom > obj.minMaxDeliveries[i][1]){
         var tempdeliver = randomNumber(obj.minMaxDeliveries[i][0], obj.minMaxDeliveries[i][1]);
@@ -40,4 +40,15 @@ function printDatainTable (obj) {
 
 printDatainTable(Beaverton);
 
+
 //Hillsboro Object
+
+var Hillsboro = {
+  minMaxPizza: [[1,3],[1,3],[1,3],[5,9],[5,9],[5,9],[2,13],[2,13],[2,13],[18,32],[18,32],[18,32],[1,3],[1,3],[1,3],[8,20],[8,20],[8,20]],
+  pizzaSales: ['HPizzaSales8','HPizzaSales9','HPizzaSales10','HPizzaSales11','HPizzaSales12','HPizzaSales13','HPizzaSales14','HPizzaSales15','HPizzaSales16','HPizzaSales17','HPizzaSales18','HPizzaSales19','HPizzaSales20','HPizzaSales21','HPizzaSales22','HPizzaSales23','HPizzaSales24','HPizzaSales1'],
+  minMaxDeliveries: [[1,7],[1,7],[1,7],[2,8],[2,8],[2,8],[1,6],[1,6],[1,6],[3,9],[3,9],[3,9],[5,12],[5,12],[5,12],[6,16],[6,16],[6,16]],
+  numberOfDeliveries: ['HDeliveries8','HDeliveries9','HDeliveries10','HDeliveries11','HDeliveries12','HDeliveries13','HDeliveries14','HDeliveries15','HDeliveries16','HDeliveries17','HDeliveries18','HDeliveries19','HDeliveries20','HDeliveries21','HDeliveries22','HDeliveries23','HDeliveries24','HDeliveries1'],
+  recDriverNumber: ['HDrivers8','HDrivers9','HDrivers10','HDrivers11','HDrivers12','HDrivers13', 'HDrivers14','HDrivers14','HDrivers15','HDrivers16','HDrivers17','HDrivers18','HDrivers19','HDrivers20','HDrivers21','HDrivers22','HDrivers23','HDrivers24','HDrivers1']
+}
+
+printDatainTable(Hillsboro);
