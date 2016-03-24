@@ -1,0 +1,71 @@
+#funkyPizza {
+  border-radius: 50%;
+  border:2px solid #fff;
+  -moz-box-shadow: 0px 6px 5px #ccc;
+  -webkit-box-shadow: 0px 6px 5px #ccc;
+  box-shadow: 0px 6px 5px #ccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+
+}
+
+#Title {
+  font-family: 'Expletus Sans', cursive;
+  font-size: 450%;
+  text-align: center;
+  color: #753670;
+  text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
+}
+
+body {
+  background-color: #2C3133;
+}
+
+#tagline {
+  text-align: center;
+  font-family: 'Expletus Sans', cursive;
+  color: #753670;
+  text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
+  margin-top: 50px;
+}
+
+.Days {
+  padding: 7px 7px 7px 7px;
+  text-align: center;
+  border: solid 2px;
+  border-collapse: collapse;
+  font-weight: bold;
+  color: #DFEBF2;
+  text-shadow: 2px 2px blue;
+
+}
+
+.Openings {
+  padding: 7px 7px 7px 7px;
+  text-align: center;
+  border: solid 2px;
+  border-collapse: collapse;
+  color: #DFEBF2;
+  text-shadow: 2px 2px blue;
+
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 80%;
+  border: solid;
+  border-collapse: collapse;
+  padding: 0;
+  background-color: #652E73;
+}
+
+#OpeningTimes {
+  text-align: center;
+  margin-top: 60px;
+  color: #dbae58;
+  text-shadow: 2px 2px #59057A;
+}
+
+tr:nth-child(even) {background-color: #346F82};
