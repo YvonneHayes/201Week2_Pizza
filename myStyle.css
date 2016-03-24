@@ -29,4 +29,4 @@ th {
 
 tr:nth-child(even) {background-color: #dbae58};
 tr:hover {
-  background-color: pink;}
+  background-color: pink !important;}
