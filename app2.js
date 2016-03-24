@@ -1,3 +1,6 @@
+//Array of all Stores
+var StoreArray = [];
+
 //Beaverton Object - now made with Constructor
 
 var Beaverton = new Object();
@@ -6,6 +9,8 @@ Beaverton.timeSlots = ['8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm',
 Beaverton.minMaxPizza = [[0,4],[0,4],[0,4],[0,7],[0,7],[0,7],[2,15],[2,15],[2,15],[15,35],[15,35],[15,35],[12,31],[12,31],[12,31],[5,20],[5,20],[5,20]];
 Beaverton.minMaxDeliveries = [[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[1,4],[1,4],[1,4],[3,8],[3,8],[3,8],[5,12],[5,12],[5,12],[6,11],[6,11],[6,11]];
 Beaverton.TotalByHour = [];
+
+StoreArray.push(Beaverton);
 
 //Hillsboro Object - now made with Constructor
 
@@ -16,6 +21,8 @@ Hillsboro.minMaxPizza = [[1,3],[1,3],[1,3],[5,9],[5,9],[5,9],[2,13],[2,13],[2,13
 Hillsboro.minMaxDeliveries = [[1,7],[1,7],[1,7],[2,8],[2,8],[2,8],[1,6],[1,6],[1,6],[3,9],[3,9],[3,9],[5,12],[5,12],[5,12],[6,16],[6,16],[6,16]];
 Hillsboro.TotalByHour = [];
 
+StoreArray.push(Hillsboro);
+
 //Downtown Object - now made with Constructor
 
 var Downtown = new Object ();
@@ -24,6 +31,8 @@ Downtown.timeSlots = ['8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','
 Downtown.minMaxPizza = [[0,4],[0,4],[0,4],[0,7],[0,7],[0,7],[2,15],[2,15],[2,15],[10,26],[10,26],[10,26],[8,22],[8,22],[8,22],[0,2],[0,2],[0,2]];
 Downtown.minMaxDeliveries = [[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[1,4],[1,4],[1,4],[4,6],[4,6],[4,6],[7,15],[7,15],[7,15],[2,8],[2,8],[2,8]];
 Downtown.TotalByHour = [];
+
+StoreArray.push(Downtown);
 
 //North East Object - now made with Constructor
 
@@ -34,6 +43,8 @@ NorthEast.minMaxPizza = [[0,4],[0,4],[0,4],[0,7],[0,7],[0,7],[5,15],[5,15],[5,15
 NorthEast.minMaxDeliveries = [[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[13,18],[13,18],[13,18],[5,22],[5,22],[5,22],[16,31],[16,31],[16,31]];
 NorthEast.TotalByHour = [];
 
+StoreArray.push(NorthEast);
+
 //Clackamas Object - now made with Constructor
 
 var Clackamas = new Object ();
@@ -43,6 +54,8 @@ Clackamas.minMaxPizza = [[2,7],[2,7],[2,7],[3,8],[3,8],[3,8],[1,5],[1,5],[1,5],[
 Clackamas.minMaxDeliveries = [[3,5],[3,5],[3,5],[3,9],[3,9],[3,9],[1,4],[1,4],[1,4],[2,4],[2,4],[2,4],[15,42],[15,42],[15,42],[6,21],[6,21],[6,21]];
 Clackamas.TotalByHour = [];
 
+StoreArray.push(Clackamas);
+
 //PDX Airport Object - now made with Constructor
 
 var PDXAirport = new Object ();
@@ -51,6 +64,8 @@ PDXAirport.timeSlots = ['8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm'
 PDXAirport.minMaxPizza = [[0,4],[0,4],[0,4],[0,7],[0,7],[0,7],[2,15],[2,15],[2,15],[6,9],[6,9],[6,9],[4,8],[4,8],[4,8],[2,4],[2,4],[2,4]];
 PDXAirport.minMaxDeliveries = [[0,4],[0,4],[0,4],[0,4],[0,4],[0,4],[1,4],[1,4],[1,4],[5,18],[5,18],[5,18],[2,5],[2,5],[2,5],[3,11],[3,11],[3,11]];
 PDXAirport.TotalByHour = [];
+
+StoreArray.push(PDXAirport);
 
 //Counting Pizzas
 
@@ -149,9 +164,37 @@ generate_table(PDXAirport);
 
 //Pizza Sales per Hour across all Stores
 
+
+//   for (i = 0; i < 18; i++) {
+//     var Bla = Beaverton.TotalByHour;
+//   }
+//
+// console.log(Bla);
+//
+// var printItNow = document.getElementById("perHour");
+// printItNow.textContent =  Bla[5];
+
+// function Hourly figures out the total amount of Pizzas at a specific hour across all stores
+
+function Hourly (arr, hour){
+  var CounterHour = 0;
+  for (i = 0; i < arr.length; i++) {
+    var HourValue = arr[i].TotalByHour[hour];
+    CounterHour = CounterHour + HourValue;
+  }
+  return CounterHour;
+}
+
+//Hourly(StoreArray,1);
+
+var printItNow = document.getElementById("perHour");
+printItNow.textContent =  "The Number of Pizzas sold at a specific Time is " + Hourly(StoreArray,1)+ "!";
+
+
+//Number of Pizzas per Store
+
 console.log(Beaverton.TotalByHour);
-var printItPlease = document.getElementById("putItHere2");
-printItPlease.textContent = "Total Number of Pizzas sold at 8am is " + Beaverton.TotalByHour[0] + "!";
+
 
 //Total Pizza Sales printed to page
 
