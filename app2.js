@@ -1,6 +1,7 @@
 //Array of all Stores
 var StoreArray = [];
 
+
 //Beaverton Object - now made with Constructor
 
 var Beaverton = new Object();
@@ -71,6 +72,20 @@ StoreArray.push(PDXAirport);
 
 var PizzaCounterWeekly = 0;
 
+//Total PIzza counting
+
+function pizzaPerStore (obj){
+  var counterStore = 0;
+  for (i = 0; i < 18; i++) {
+    var StoreValue = obj.TotalByHour;
+    //console.log(StoreValue);
+    counterStore += StoreValue[i];
+    //console.log(counterStore);
+  }
+  return counterStore;
+}
+
+
 //Random Number Generator
 
 function randomNumber(min,max)
@@ -78,10 +93,10 @@ function randomNumber(min,max)
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-var MainPageAnchor = document.getElementById("MainPage");
-var SalesDataPageAnchor = document.getElementById("SalesDataPage"); //keeping html files seperate
-
-if (SalesDataPageAnchor) {
+// var MainPageAnchor = document.getElementById("MainPage");
+// var SalesDataPageAnchor = document.getElementById("SalesDataPage"); //keeping html files seperate
+//
+// if (SalesDataPageAnchor) {
 
 //Generate Table Function
 
@@ -176,7 +191,6 @@ function Hourly (arr, hour){
   return CounterHour;
 }
 
-//Hourly(StoreArray,1);
 
 var printItNow = document.getElementById("perHour");
 printItNow.textContent =  "The Number of Pizzas sold at a specific Time is " + Hourly(StoreArray,1)+ "!";
@@ -184,21 +198,7 @@ printItNow.textContent =  "The Number of Pizzas sold at a specific Time is " + H
 
 //Number of Pizzas per Store
 
-function pizzaPerStore (obj){
-  counterStore = 0;
-  for (i = 0; i < 18; i++) {
-    var StoreValue = obj.TotalByHour;
-    counterStore = counterStore + StoreValue[i];
-  }
-  return counterStore;
-}
- 
 
-  // for (i = 0; i < 18; i++) {
-  //   var Bla = Beaverton.TotalByHour;
-  // }
-
-//console.log(Bla);
 
 var printItNow2 = document.getElementById("perStore");
 printItNow2.textContent = pizzaPerStore(Beaverton);
@@ -210,8 +210,16 @@ var printItPlease = document.getElementById("putItHere");
 printItPlease.textContent = "Total Number of Pizzas sold this week is " + PizzaCounterWeekly + "!";
 
 
- } else if (MainPageAnchor) {
+ //} else if (MainPageAnchor) {
 
 
 
-}
+   console.log(pizzaPerStore(Beaverton));
+   console.log(Beaverton.TotalByHour);
+   var testingIt = document.getElementById("test");
+   testingIt.textContent = "Total Number of Pizzas sold this week is " + pizzaPerStore(Beaverton)+ "!";
+
+
+
+
+//}
