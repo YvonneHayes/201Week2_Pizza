@@ -165,15 +165,6 @@ generate_table(PDXAirport);
 //Pizza Sales per Hour across all Stores
 
 
-//   for (i = 0; i < 18; i++) {
-//     var Bla = Beaverton.TotalByHour;
-//   }
-//
-// console.log(Bla);
-//
-// var printItNow = document.getElementById("perHour");
-// printItNow.textContent =  Bla[5];
-
 // function Hourly figures out the total amount of Pizzas at a specific hour across all stores
 
 function Hourly (arr, hour){
@@ -193,7 +184,24 @@ printItNow.textContent =  "The Number of Pizzas sold at a specific Time is " + H
 
 //Number of Pizzas per Store
 
-console.log(Beaverton.TotalByHour);
+function pizzaPerStore (obj){
+  counterStore = 0;
+  for (i = 0; i < 18; i++) {
+    var StoreValue = obj.TotalByHour;
+    counterStore = counterStore + StoreValue[i];
+  }
+  return counterStore;
+}
+ 
+
+  // for (i = 0; i < 18; i++) {
+  //   var Bla = Beaverton.TotalByHour;
+  // }
+
+//console.log(Bla);
+
+var printItNow2 = document.getElementById("perStore");
+printItNow2.textContent = pizzaPerStore(Beaverton);
 
 
 //Total Pizza Sales printed to page
@@ -202,7 +210,7 @@ var printItPlease = document.getElementById("putItHere");
 printItPlease.textContent = "Total Number of Pizzas sold this week is " + PizzaCounterWeekly + "!";
 
 
-} else if (MainPageAnchor) {
+ } else if (MainPageAnchor) {
 
 
 
