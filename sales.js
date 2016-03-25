@@ -1,4 +1,4 @@
-//Calling Function to generate all the tables
+//Calling Function to generate all the individual Store tables
 
 generate_table(Beaverton);
 generate_table(Hillsboro);
@@ -21,3 +21,6 @@ printItNow2.textContent = pizzaPerStore(Beaverton);
 
 var printItPlease = document.getElementById("putItHere");
 printItPlease.textContent = "Total Number of Pizzas sold this week is " + PizzaCounterWeekly + "!";
+
+//Calling Function to generate the Pizzas sold per hour table
+generateInfoTable();

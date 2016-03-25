@@ -11,7 +11,7 @@
 }
 
 #Title {
-  font-family: 'Expletus Sans', cursive;
+  font-family: 'Revalia', cursive;
   font-size: 450%;
   text-align: center;
   color: #753670;
@@ -19,12 +19,13 @@
 }
 
 body {
+  background-image: url("pics/darkspace2.jpg");
   background-color: #2C3133;
 }
 
 #tagline {
   text-align: center;
-  font-family: 'Expletus Sans', cursive;
+  font-family: 'Revalia', cursive;
   color: #753670;
   text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
   margin-top: 50px;
