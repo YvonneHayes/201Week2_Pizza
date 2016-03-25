@@ -9,14 +9,12 @@ function pizzaPerStore (obj){
   var counterStore = 0;
   for (i = 0; i < 18; i++) {
     var StoreValue = obj.TotalByHour;
-    //console.log(StoreValue);
     counterStore += StoreValue[i];
-    //console.log(counterStore);
   }
   return counterStore;
 }
 
-//Function to calculate the total amount of pizzas produced per hour across all stores
+//Function to calculate the total amount of pizzas sold per hour across all stores
 function Hourly (arr, hour){
   var CounterHour = 0;
   for (i = 0; i < arr.length; i++) {
@@ -94,7 +92,7 @@ function generate_table(obj) {
   tbl.setAttribute("border", "2");
 }
 
-//Second big, huge, gigantic Function to generate the Pizzas sold per Hour and fill it with all the info
+//Second big, huge, gigantic Function to generate the Pizzas sold per Hour table and fill it with all the info
 
 function generateInfoTable() {
   // get the reference for the body

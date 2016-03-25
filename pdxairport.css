@@ -1,0 +1,69 @@
+ul {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: #346F82;
+}
+
+li {
+    float: right;;
+}
+
+li a {
+    font-family: 'Expletus Sans', cursive;
+    display: block;
+    color: #dbae58;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: 2px 2px #59057A;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+
+.active {
+    background-color: #346F82;
+    color: white;
+}
+
+#nav{
+  width: 100%;
+  text-align: center;
+}
+
+#PHeadline {
+  font-family: 'Revalia', cursive;
+  font-size: 450%;
+  text-align: center;
+  color: #753670;
+  text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+body {
+  background-image: url("pics/space2.jpg");
+  background-color: #2C3133;
+}
+
+#PMap {
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+
+#PInfo {
+  font-family: 'Expletus Sans', cursive;
+  font-size: 150%;
+  color: #346F82;
+  text-shadow: 1px 1px 2px black, 0 0 25px #59057A, 0 0 5px white;
+  float: right;
+  margin-right: 170px;
+  margin-top: 200px;
+
+}

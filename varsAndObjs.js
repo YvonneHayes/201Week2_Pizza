@@ -2,7 +2,6 @@
 var StoreArray = [];
 
 //Store Creator Function
-
 function Stores (AnchorName, timeSlots, minMaxPizza, minMaxDeliveries, TotalByHour) {
   this.AnchorName = AnchorName;
   this.timeSlots = timeSlots;
