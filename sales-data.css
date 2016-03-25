@@ -1,0 +1,56 @@
+body {
+  background-color: #DDECEF;
+}
+
+th, td {
+  padding: 7px 7px 7px 7px;
+  text-align: center;
+  border: solid 2px;
+  border-collapse: collapse;
+
+}
+
+html, body {
+    width: 100%;
+}
+table {
+    margin: 0 auto;
+    width: 80%;
+    border: solid;
+    border-collapse: collapse;
+    padding: 0;
+    background-color: #753670;
+
+}
+
+th {
+    background-color: #dbae58;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #346F82};
+tr:hover {
+  background-color: pink !important;}
+
+h2 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+h1 {
+  font-family: 'Revalia', cursive;
+  font-size: 400%;
+  text-align: center;
+  color: #753670;
+  text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#title {
+  margin-top: 35px;
+}
+
+#totalPizzas {
+  margin-top: 40px;
+}
