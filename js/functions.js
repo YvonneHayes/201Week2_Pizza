@@ -139,3 +139,65 @@ function generateInfoTable() {
   // sets the border attribute of tbl to 2;
   tbl.setAttribute("border", "2");
 }
+
+// Function to create elements
+function createElements(storeName, storeId, AnchorId) {
+  var storesDiv = document.getElementById('Stores');
+
+  var h2 = document.createElement('h2');
+  var h2Text = document.createTextNode(storeName);
+  h2.setAttribute('id', storeId);
+  h2.appendChild(h2Text);
+  storesDiv.appendChild(h2);
+
+  var store = document.createElement('div');
+  store.setAttribute('id', AnchorId);
+  storesDiv.appendChild(store);
+}
+
+// Forms
+var clickButton = document.getElementById('button');
+
+// Adding event listener function
+clickButton.addEventListener('click', function () {
+  var userInput1 = document.getElementById('textBox1').value;
+  var userInput2 = document.getElementById('textBox2').value;
+  var userInput3 = document.getElementById('textBox3').value;
+  var userInput4 = document.getElementById('textBox4').value;
+  var userInput5a = document.getElementById('textBox5a').value;
+  var userInput5b = document.getElementById('textBox5b').value;
+  var userInput6a = document.getElementById('textBox6a').value;
+  var userInput6b = document.getElementById('textBox6b').value;
+
+  var timeSlots = userInput4.split(',');
+  var userInput5aSplit = userInput5a.split(', ');
+  var userInput5bSplit = userInput5b.split(', ');
+  var minMaxPizza = [];
+
+  for (var i = 0; i < userInput5aSplit.length; i++) {
+    var userInput5Arr = [];
+    userInput5Arr.push(userInput5aSplit[i]);
+    userInput5Arr.push(userInput5bSplit[i]);
+    minMaxPizza.push(userInput5Arr);
+  }
+
+  var userInput6aSplit = userInput6a.split(', ');
+  var userInput6bSplit = userInput6b.split(', ');
+  var minMaxDeliveries = [];
+
+  for (var i = 0; i < userInput6aSplit.length; i++) {
+    var userInput6Arr = [];
+    userInput6Arr.push(userInput6aSplit[i]);
+    userInput6Arr.push(userInput6bSplit[i]);
+    minMaxDeliveries.push(userInput6Arr);
+  }
+
+  createElements(userInput1, userInput2, userInput3);
+
+  console.log(timeSlots);
+  var newStore = new Stores(userInput3, timeSlots, minMaxPizza, minMaxDeliveries, []);
+  console.log(newStore);
+  StoreArray.push(newStore);
+  console.log(StoreArray);
+  generate_table(newStore);
+});
