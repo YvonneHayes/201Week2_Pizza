@@ -200,4 +200,13 @@ clickButton.addEventListener('click', function () {
   StoreArray.push(newStore);
   console.log(StoreArray);
   generate_table(newStore);
+
+  var printItNow2 = document.getElementById(userInput2);
+  printItNow2.textContent = userInput1 + " Store - sold " +pizzaPerStore(newStore)+ " Pizzas this week.";
+
+  var infoTable = document.getElementById('InfoTable');
+  infoTable.innerHTML = '';
+  generateInfoTable();
+
+  printItPlease.textContent = "Across all stores we sold " + PizzaCounterWeekly + " Pizzas this week!";
 });
