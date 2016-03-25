@@ -1,5 +1,10 @@
-//Total Pizza per Store
+//Random Number Generator
+function randomNumber(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
+//Function to calculate total Pizzas per Store
 function pizzaPerStore (obj){
   var counterStore = 0;
   for (i = 0; i < 18; i++) {
@@ -11,14 +16,17 @@ function pizzaPerStore (obj){
   return counterStore;
 }
 
-
-//Random Number Generator
-
-function randomNumber(min,max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
+//Function to calculate the total amount of pizzas produced per hour across all stores
+function Hourly (arr, hour){
+  var CounterHour = 0;
+  for (i = 0; i < arr.length; i++) {
+    var HourValue = arr[i].TotalByHour[hour];
+    CounterHour = CounterHour + HourValue;
+  }
+  return CounterHour;
 }
 
+//Big, huge, gigantic Function to generate the tables and fill them with all the info
 function generate_table(obj) {
   // get the reference for the body
   var body = document.getElementById(obj.AnchorName);
@@ -44,7 +52,7 @@ function generate_table(obj) {
   var headerTextD = document.createTextNode("Recommended Number of Drivers");
   headerD.appendChild(headerTextD);
   headerRow.appendChild(headerD);
-  tblBody.appendChild(headerRow); //Done making Headers
+  tblBody.appendChild(headerRow); //done making Headers
 
   // creating all cells
   for (var i = 0; i < 18; i++) {
@@ -84,15 +92,4 @@ function generate_table(obj) {
   body.appendChild(tbl);
   // sets the border attribute of tbl to 2;
   tbl.setAttribute("border", "2");
-}
-
-// function Hourly figures out the total amount of Pizzas at a specific hour across all stores
-
-function Hourly (arr, hour){
-  var CounterHour = 0;
-  for (i = 0; i < arr.length; i++) {
-    var HourValue = arr[i].TotalByHour[hour];
-    CounterHour = CounterHour + HourValue;
-  }
-  return CounterHour;
 }
