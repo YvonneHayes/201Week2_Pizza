@@ -1,6 +1,11 @@
 body {
-  background-color: #DDECEF;
+  background-color: #2C3133;
+  background-image: url("../pics/space3.jpg");
 }
+/*
+#MainPart {
+  background-image: url("../pics/space3.jpg");
+}*/
 
 th, td {
   padding: 7px 7px 7px 7px;
@@ -35,6 +40,10 @@ tr:hover {
 h2 {
   text-align: center;
   margin-top: 80px;
+  margin-bottom: 5px;
+  font-family: 'Expletus Sans', cursive;
+  text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
+  color: white;
 }
 
 h1 {
@@ -48,8 +57,57 @@ h1 {
 }
 
 .boxes {
-  width: 400px;
+  width:300px;
   margin: 0 auto;
+}
+
+#textBox1 {
+  width: 300px;
+  height: 30px;
+}
+
+#textBox2 {
+  width: 300px;
+  height: 30px;
+}
+
+#textBox3 {
+  width: 300px;
+  height: 30px;
+}
+
+#textBox4 {
+  width: 300px;
+  height: 30px;
+}
+
+#textBox5a {
+  width: 300px;
+  height: 30px;
+}
+
+#textBox5b {
+  width: 300px;
+  height: 30px;
+}
+
+#textBox6a {
+  width: 300px;
+  height: 30px;
+}
+
+#textBox6b {
+  width: 300px;
+  height: 30px;
+}
+
+.Examples{
+  margin-top: 25px;
+  margin-bottom: 2px;
+  width: 500px;
+  text-align: justify;
+  color: #dbae58;
+  text-shadow: 2px 2px #59057A;
 }
 
 #title {
@@ -57,5 +115,81 @@ h1 {
 }
 
 #totalPizzas {
-  margin-top: 40px;
+  margin-top: 80px;
+  font-size: 200%;
 }
+
+#button {
+  margin-top: 30px;
+  width: 300px;
+  height: 40px;
+}
+
+#NewLocation {
+  font-family: 'Revalia', cursive;
+  font-size: 400%;
+  text-align: center;
+  color: #753670;
+  text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 2px;
+    margin-right: 2px;
+    overflow: hidden;
+    background-color: #346F82;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-family: 'Expletus Sans', cursive;
+    display: inline-block;;
+    color: #dbae58;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    text-shadow: 2px 2px #59057A;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+
+.active {
+    background-color: #346F82;
+    color: white;
+}
+
+#InternalLinks {
+  text-align: left;
+}
+
+#totalPizzas {
+  font-family: 'Expletus Sans', cursive;
+  text-shadow: 1px 1px 2px black, 0 0 25px #7ED9F7, 0 0 5px white;
+  color: white;
+}
+
+
+#Divider {
+  overflow: hidden;
+  background-color: #346F82;
+  width: 100%;
+  height: 50px;
+  margin-top: 80px;
+
+}
+
+/*a:link, a:visited {
+  text-align: center;
+  margin-top: 10px;
+  color: #753670;
+}*/
