@@ -169,6 +169,7 @@ clickButton.addEventListener('click', function () {
   var userInput6a = document.getElementById('textBox6a').value;
   var userInput6b = document.getElementById('textBox6b').value;
 
+//making text boxes work with my arrays
   var timeSlots = userInput4.split(',');
   var userInput5aSplit = userInput5a.split(', ');
   var userInput5bSplit = userInput5b.split(', ');

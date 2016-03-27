@@ -3,50 +3,82 @@
 <head>
   <title>Sales Data</title>
   <link rel="stylesheet" type="text/css" href="../css/sales-data.css">
+  <link href='https://fonts.googleapis.com/css?family=Expletus+Sans:700,600,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Revalia' rel='stylesheet' type='text/css'>
 </head>
 <body id="SalesDataPage">
+  <ul id="Top">
+    <li><a href="#BStore">Bearverton Store</a></li>
+    <li><a href="#HStore">Hillsboro Store</a></li>
+    <li><a href="#DStore">Downtown Store</a></li>
+    <li><a href="#NEStore">North East Store</a></li>
+    <li><a href="#CStore">Clackamas Store</a></li>
+    <li><a href="#PDXStore">PDX Airport Store</a></li>
+  </ul>
   <h1>Sales Data</h1>
+  <ul id="InternalLinks">
+    <li><a href="#InfoTable">Pizzas sold per Hour</a></li>
+    <li><a href="#NewLocation">Create new Location</a></li>
+  </ul>
   <h2 id="totalPizzas"></h2>
   <div id="Stores">
     <h2 id="BStore">Beaverton Store</h2>
+    <p><a href="#Top">Back to Top</a></p>
     <div id="BeavertonAnchor"></div>
     <h2 id="HStore">Hillsboro Store</h2>
+    <p><a href="#Top">Back to Top</a></p>
     <div id="HillsboroAnchor"></div>
     <h2 id="DStore">Downtown Store</h2>
+    <p><a href="#Top">Back to Top</a></p>
     <div id="DowntownAnchor"></div>
     <h2 id="NEStore">North East Store</h2>
+    <p><a href="#Top">Back to Top</a></p>
     <div id="NorthEastAnchor"></div>
     <h2 id="CStore">Clackamas Store</h2>
+    <p><a href="#Top">Back to Top</a></p>
     <div id="ClackamasAnchor"></div>
     <h2 id="PDXStore">PDX Airport Store</h2>
+    <p><a href="#Top">Back to Top</a></p>
     <div id="PDXAirportAnchor"></div>
-  </div>
   <h3 id="TotalNumberPizzas"></h3>
   <h2>Number of Pizzas sold per hour across all Stores</h2>
+  <p><a href="#Top">Back to Top</a></p>
   <div id="InfoTable"></div>
+</div>
+<div id="Divider">
+</div>
+  <h2 id="NewLocation">Create new Store Location</h2>
+  <p><a href="#Top">Back to Top</a></p>
   <div class="boxes">
     <div id="formStoreName">
-      <input id="textBox1" type="text" name="StoreName" placeholder="Store Name" value="Portland">
-      <p>Hi!</p>
+      <p class="Examples">Please enter new location name, e.g. Gresham</p>
+      <input id="textBox1" type="text" name="StoreName" placeholder="Store Name" value="NewLocation">
     </div>
     <div id="formStoreId">
-      <input id="textBox2" type="text" name="StoreId" placeholder="Store ID" value="StoreId">
+      <p class="Examples">Please enter new location ID, e.g. GreshamId</p>
+      <input id="textBox2" type="text" name="StoreId" placeholder="Store ID" value="NewLocationId">
     </div>
     <div id="formAnchorName">
-      <input id="textBox3" type="text" name="StoreAnchor" placeholder="Store Anchor" value="StoreAnchor">
+      <p class="Examples">Please enter new location Anchor, e.g. GreshamAnchor</p>
+      <input id="textBox3" type="text" name="StoreAnchor" placeholder="Store Anchor" value="NewLocationAnchor">
     </div>
     <div id="formTimeSlots">
+      <p class="Examples">Please enter new location Time Slots, e.g. 8am,9am,10am,11am...etc.</p>
       <input id="textBox4" type="text" name="timeSlots" placeholder="Time Slots" value="8am, 9am, 10am, 11am, 12pm, 1pm, 2pm, 3pm, 4pm, 5pm, 6pm, 7pm, 8pm, 9pm, 10pm, 11pm, 12am, 1am">
     </div>
     <div id="formMinMaxPizza">
-      <input id="textBox5a" type="text" name="minPizza" placeholder="Min of Pizzas Sold" value="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18">
-      <input id="textBox5b" type="text" name="maxPizza" placeholder="Max of Pizzas Sold" value="4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21">
+      <p class="Examples">Please enter new minimum amount of Pizzas sold, e.g. 0,0,3,4,4,...etc.</p>
+      <input id="textBox5a" type="text" name="minPizza" placeholder="Min of Pizzas Sold" value="0, 0, 0, 0, 0, 0, 2, 2, 2, 15, 15, 15, 12, 12, 12, 8, 8, 8">
+      <p class="Examples">Please enter new maximum amount of Pizzas sold, e.g. 8,14,35,35,22,...etc.</p>
+      <input id="textBox5b" type="text" name="maxPizza" placeholder="Max of Pizzas Sold" value="4, 4, 4, 7, 7, 7, 15, 15, 15, 35, 35, 35, 31, 31, 31, 20, 20, 20">
     </div>
     <div id="formMinMaxDelivery">
-      <input id="textBox6a" type="text" name="minDelivery" placeholder="Min of Delieveries" value="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18">
-      <input id="textBox6b" type="text" name="maxDelivery" placeholder="Max of Delieveries" value="4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21">
+      <p class="Examples">Please enter new minimum number of Deliveries, e.g. 1,1,4,4,6,...etc.</p>
+      <input id="textBox6a" type="text" name="minDelivery" placeholder="Min of Delieveries" value="0, 0, 0, 0, 0, 0, 1, 1, 1, 3, 3, 3, 5, 5, 5, 6, 6, 6">
+      <p class="Examples">Please enter new maximum number of Deliveries, e.g. 1,4,6,6,8,...etc.</p>
+      <input id="textBox6b" type="text" name="maxDelivery" placeholder="Max of Delieveries" value="4, 4, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8, 12, 12, 12, 11, 11, 11">
     </div>
-    <input id="button" type="button" name="submit" value="Submit">
+    <input id="button" type="button" name="submit" value="Add new Location">
   </div>
   <script src="../js/varsAndObjs.js" type="text/javascript"></script>
   <script src="../js/functions.js" type="text/javascript"></script>
